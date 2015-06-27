@@ -1,0 +1,24 @@
+#include <time.h> //has a function clock_t clock();
+
+
+
+clock_t t1,t0;
+double elapsed = 0.0; //just remember in C you cant initialize on defining of a vriable
+
+
+
+t0=clock(); 
+
+//sort function goes here
+
+t1=clock();
+elapsed +=(t1-t0)/((double)CLOCKS_PER_SEC);
+
+//The time in seconds is the value returned by the clock function, divided by 
+//CLOCKS_PER_SEC. CLK_TCK
+
+int compare(const void  *x,const void  *y)
+{
+	return(* ((int*)x)-*((int *)y));
+}
+
